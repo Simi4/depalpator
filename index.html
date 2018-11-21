@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>D e p a l p a t o r</title>
+  <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet">
+  <style type="text/css">
+    html, body {
+        font: normal 16px/26px "Roboto", Arial, sans-serif;
+        font-size: 14px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .ui-button {
+        margin: 4px;
+    }
+    #app {
+        position: absolute;
+        height: 150px;
+        overflow: auto;
+        margin: 2px;
+    }
+    #network {
+        position: absolute;
+        width: 100%;
+        top: 155px;
+        bottom: 0;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <script>
+$(function() {
+var all_groups = [];
+var app_data = { symbols: [] };
+
+var app = new Vue({
+    el: '#app',
+    data: app_data,
+    created: function() {
+        $.ajax({
+            url: 'data/symbols.xml',
+            dataType: 'xml',
+            success: function(data){
+                $(data).find('symbol').each(function() {
+                    app_data.symbols.push($(this).find('name').text());
+                });
+            }
+        });
+        $.ajax({
+            url: 'graph_data/groups.xml',
+            dataType: 'xml',
+            success: function(data){
+                $(data).find('group').each(function() {
+                    all_groups.push({
+                        id: parseInt($(this).find('id').text()),
+                        image: $(this).find('image').text(),
+                        symbols: $(this).find('name').text().split(', ')
+                    });
+                });
+            }
+        });
+    },
+    updated: function() {
+        $('input').checkboxradio({ icon: false });
+        $('input').click(function() {
+            vis_data.nodes.clear();
+            vis_data.edges.clear();
+            do_graph($(this).next().text());
+            used = [];
+        });
+    }
+});
+
+var used = [];
+function do_graph(key, parent=null, gr=null, depth=0) {
+    //console.log(key, parent, gr, depth);
+    var node = 0;
+    if (parent == null) {
+        vis_data.nodes.add({
+            id: node,
+            shape: 'box',
+            label: key,
+            level: depth
+        });
+    } else {
+        node = used.indexOf(gr.id) + 1;
+        if (node == 0) {
+            used.push(gr.id);
+            node = used.indexOf(gr.id) + 1;
+            vis_data.nodes.add({
+                id: node,
+                shape: 'image',
+                image: gr.image,
+                level: depth
+            });
+        }
+    }
+    if (parent !== null) {
+        vis_data.edges.add({
+            from: parent,
+            to: node
+        });
+    }
+    if (depth > 2) return;
+    all_groups.forEach(function(group) {
+        if (group === gr) return;
+        if (group.symbols.indexOf(key) != -1) {
+            group.symbols.forEach(function(symbol) {
+                if (symbol == key) return;
+                do_graph(symbol, node, group, depth + 1);
+            });
+        }
+    });
+}
+
+var vis_data = {
+    nodes: new vis.DataSet([]),
+    edges: new vis.DataSet([])
+};
+// create a network
+var container = document.getElementById('network');
+var options = {
+    layout: {
+        hierarchical: {
+            enabled: true,
+            levelSeparation: 150,
+            nodeSpacing: 250
+        }
+    },
+    edges: {
+        arrows: 'to'
+    },
+    nodes: {
+        shapeProperties: {
+            useImageSize: true,
+            useBorderWithImage: true
+        }
+    },
+    physics: {
+        enabled: false
+    }
+};
+var network = new vis.Network(container, vis_data, options);
+});
+  </script>
+</head>
+<body>
+  <div id="app">
+    <template v-for="(symbol, index) in symbols">
+      <input type="radio" name="radio-1" :id="'radio-'+index">
+      <label :for="'radio-'+index">{{symbol}}</label>
+    </template>
+  </div>
+  <div id="network"></div>
+</body>
+</html>

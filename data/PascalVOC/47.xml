@@ -551,4 +551,40 @@
 			<ymax>1013</ymax>
 		</bndbox>
 	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>366</xmin>
+			<ymin>1030</ymin>
+			<xmax>565</xmax>
+			<ymax>1091</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>313</xmin>
+			<ymin>974</ymin>
+			<xmax>607</xmax>
+			<ymax>1022</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>175</xmin>
+			<ymin>676</ymin>
+			<xmax>431</xmax>
+			<ymax>716</ymax>
+		</bndbox>
+	</object>
 </annotation>
