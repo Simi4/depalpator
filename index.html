@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>D e p a l p a t o r</title>
-  <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css" rel="stylesheet">
+  <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet">
   <style type="text/css">
     html, body {
@@ -16,7 +17,13 @@
     .ui-button {
         margin: 4px;
     }
-    #app {
+    .find-symbol, .find-symbol:hover {
+        background: orange;
+    }
+    .known-symbol, .known-symbol:hover {
+        background: lime;
+    }
+    #header {
         position: absolute;
         height: 150px;
         overflow: auto;
@@ -24,19 +31,46 @@
     }
     #network {
         position: absolute;
-        width: 100%;
+        left: 0;
+        right: 330px;
         top: 155px;
         bottom: 0;
+    }
+    #conf {
+        position: absolute;
+        width: 360px;
+        right: 5px;
+        top: 155px;
+        bottom: 5px;
+        background: lightcyan;
+        overflow: auto;
+    }
+    #conf-info {
+        font: normal 16px/26px "Roboto", Arial, sans-serif;
+        text-align: center;
+    }
+    .list-item {
+        display: table;
+        font-size: 18px;
+        border-bottom: 1px solid lightgrey;
+        width: 100%;
+        word-wrap: normal;
+    }
+    .list-item-cell {
+        display: table-cell;
+        vertical-align: middle;
     }
   </style>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
   <script>
 $(function() {
 var all_groups = [];
-var app_data = { symbols: [] };
+var app_data = { symbols: [], formulas: [] };
 
 var app = new Vue({
     el: '#app',
@@ -49,6 +83,32 @@ var app = new Vue({
                 $(data).find('symbol').each(function() {
                     app_data.symbols.push($(this).find('name').text());
                 });
+                Vue.nextTick(function () {
+                    $('input[type=radio]').checkboxradio({ icon: false });
+                    $('input[type=radio]').click(function() {
+                        vis_data.nodes.clear();
+                        vis_data.edges.clear();
+                        used = [];
+                        do_graph($(this).next().text());
+                    });
+                    $.contextMenu({
+                        selector: '.context-menu-one', 
+                        callback: function(key, options) {
+                            console.log($(this).text());
+                            if (key == 'find') {
+                                $(this).removeClass('known-symbol', 100);
+                                $(this).toggleClass('find-symbol', 100);
+                            } else {
+                                $(this).removeClass('find-symbol', 100);
+                                $(this).toggleClass('known-symbol', 100);
+                            }
+                        },
+                        items: {
+                            find: { name: "Нужно найти" },
+                            known: { name: "Известен" }
+                        }
+                    });
+                });
             }
         });
         $.ajax({
@@ -59,24 +119,16 @@ var app = new Vue({
                     all_groups.push({
                         id: parseInt($(this).find('id').text()),
                         image: $(this).find('image').text(),
-                        symbols: $(this).find('name').text().split(', ')
+                        symbols: $(this).find('name').text().split(', '),
+                        used: false
                     });
                 });
             }
         });
-    },
-    updated: function() {
-        $('input').checkboxradio({ icon: false });
-        $('input').click(function() {
-            vis_data.nodes.clear();
-            vis_data.edges.clear();
-            do_graph($(this).next().text());
-            used = [];
-        });
     }
 });
 
-var used = [];
+var used = null;
 function do_graph(key, parent=null, gr=null, depth=0) {
     //console.log(key, parent, gr, depth);
     var node = 0;
@@ -106,7 +158,7 @@ function do_graph(key, parent=null, gr=null, depth=0) {
             to: node
         });
     }
-    if (depth > 2) return;
+    if (depth >= 2) return;
     all_groups.forEach(function(group) {
         if (group === gr) return;
         if (group.symbols.indexOf(key) != -1) {
@@ -117,6 +169,41 @@ function do_graph(key, parent=null, gr=null, depth=0) {
         }
     });
 }
+
+$('#solve').click(function() {
+    app_data.formulas = [];
+    var known = $.map($('.known-symbol'), function(element) {
+        return $(element).text()
+    });
+    var find = $.map($('.find-symbol'), function(element) {
+        return $(element).text()
+    });
+    var groups = all_groups.slice();
+    var do1 = true;
+    while (do1) {
+        let do2 = true;
+
+        for (let group of groups) {
+            if (group.used) continue;
+            let diff = $(group.symbols).not($(known));
+            if (diff.length != 1) continue;
+            known.push(diff[0]);
+            app_data.formulas.push({
+                group: group,
+                symbol: diff[0]
+            })
+            do2 = false;
+            if ($(find).not($(known)).length == 0) {
+                do1 = false;
+                break;
+            }
+        }
+
+        if (do2) {
+            break;
+        }
+    }
+});
 
 var vis_data = {
     nodes: new vis.DataSet([]),
@@ -146,16 +233,31 @@ var options = {
     }
 };
 var network = new vis.Network(container, vis_data, options);
+
 });
   </script>
 </head>
 <body>
   <div id="app">
-    <template v-for="(symbol, index) in symbols">
-      <input type="radio" name="radio-1" :id="'radio-'+index">
-      <label :for="'radio-'+index">{{symbol}}</label>
-    </template>
+    <div id="header">
+      <template v-for="(symbol, index) in symbols">
+        <input type="radio" name="radio-1" :id="'radio-'+index">
+        <label class="context-menu-one" :for="'radio-'+index">{{symbol}}</label>
+      </template>
+    </div>
+    <div id="network"></div>
+    <div id="conf">
+      <p id="conf-info">
+        Выберите символы правым кликом.
+        <button id="solve" class="ui-button ui-widget ui-corner-all">Построить решение</button>
+      </p>
+      <template v-for="f in formulas">
+        <div class="list-item">
+          <img :src="f.group.image" class="list-item-cell" />
+          <span class="list-item-cell">=> {{f.symbol}}</span>
+        </div>
+      </template>
+    </div>
   </div>
-  <div id="network"></div>
 </body>
 </html>

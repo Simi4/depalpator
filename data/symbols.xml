@@ -1,546 +1,6 @@
 <symbols>
     <symbol>
-        <name>ПС.треб</name>
-        <descr>[бит/сек]</descr>
-    </symbol>
-    <symbol>
-        <name>L.сообщ</name>
-        <descr>[бит]</descr>
-    </symbol>
-    <symbol>
-        <name>T.сообщ</name>
-        <descr>[сек]</descr>
-    </symbol>
-    <symbol>
-        <name>ПС.доп.лин</name>
-        <descr>[бит/(сек*лин)]</descr>
-    </symbol>
-    <symbol>
-        <name>ПС.доп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>T.след</name>
-        <descr>[сек*лин/бит]</descr>
-    </symbol>
-    <symbol>
-        <name>R.прод</name>
-        <descr>[Ом]</descr>
-    </symbol>
-    <symbol>
-        <name>r.пог</name>
-        <descr>[Ом/м]</descr>
-    </symbol>
-    <symbol>
-        <name>L.лин</name>
-        <descr>[м]</descr>
-    </symbol>
-    <symbol>
-        <name>L</name>
-        <descr>[Гн]</descr>
-    </symbol>
-    <symbol>
-        <name>L.пог</name>
-        <descr>[Гн/м]</descr>
-    </symbol>
-    <symbol>
-        <name>Δλ.отн.прд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>λ.0.нижн</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.вх.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δω.шп.волс</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>λ.0.верх</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.вх.прм.норм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>λ.0</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>T.зап.дор</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>δ.2</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>C.вх.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>S.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>τ.р.кан</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.прд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>F.доп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>R.волн</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>R.общ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>n.1</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>r.внутр.прд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>NA</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>C.общ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>θ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>τ.волс</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.распр.мощн</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>S.прм.доп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δ.общ.реал</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>U.вх.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>τ.имп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>V.сект</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>N.лин</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ω.пр.верх</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>δ.общ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>L.лин.доп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.прд.ср</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.вх.прд.норм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>U.прд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>n.2</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>δ.1</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>S.сф.сегм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>F</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ω.пр.изл</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>G.попер</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>C.пог</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>V.дор.FDD</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ПС.треб.инф</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Ф.вх.опт.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δω.п.р.кан</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>η</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δλ.прд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>r</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.прд.норм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δω.п</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.прд.имп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>R.р.кан</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>f.след</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>R.вх.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>τ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>δ.3</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>N.сект</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>T.пр</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>R.вых.прд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>d</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δ.общ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>C</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δω.п.волс</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>g.пог</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>R.н.общ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>δ.пог</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>θ.max.прд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Ф.вх.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>λ.сообщ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>V.распр</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>C.пог.доп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ω.FDD.доп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δ.нс</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Ф.прд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>μ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δ.нс.доп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.вх.инт</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>k.исп.инф</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ρ.эфф.пз.верд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>τ.инт</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.соотн</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>n.ацп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.сш.вх.пз.чф</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>L.икк</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.шф.вх.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ω.пр.верх.чм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>L.сообщ.общ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.сш.вх.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.исп.физ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.исп.инф</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δ.пр</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>BER.вых.пз.доп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>U.пр.min</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δ.кв.ур</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ρ.эф.пз.шф</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.с.ш.вх.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>T.ц.преобр</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.вх.вх.норм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.с.вх.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>θ.max.опт.прд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Ф.опт.прд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>θ.с</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.исп.общ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.вых.инт</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>γ.чм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>n.кк</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δω.шп.икк</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>BER.вх.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>τ.икк</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>BER.вых.пз.апп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.с.ш.вых.пз.нс</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>U.пр.max</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.с.ш.вых.пз</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δω.п.чф</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>L.сообщ.инф</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>L.блок</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>BER.вых.пз.треб</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.сш.выхпз.чф</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.служ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δf.шп.икк</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>n.кк.доп</name>
-        <descr />
-    </symbol>
-    <symbol>
         <name>BER.вх.пз.верд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ПС.треб.физ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ρ.эф.пз.нс</name>
         <descr />
     </symbol>
     <symbol>
@@ -548,83 +8,11 @@
         <descr />
     </symbol>
     <symbol>
-        <name>ω.пр.верх.доп</name>
+        <name>BER.вх.прм</name>
         <descr />
     </symbol>
     <symbol>
-        <name>S.опт.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.сш.вхпз.верд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>T.распр</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>R.р.кан.доп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>P.ш.вх.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.исп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>K.сш.выхпз.верд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δω.п.р.кан.доп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ε</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>T.вз.спд</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>N.блок</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ρ.эфф.пз.чф</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>T.вр.дискр</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>L.икк.доп</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>Δf.шп.волс</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>L.служ.блок</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ПС.треб.служ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>δ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>L.волс</name>
+        <name>BER.вых.пз.апп</name>
         <descr />
     </symbol>
     <symbol>
@@ -632,59 +20,31 @@
         <descr />
     </symbol>
     <symbol>
-        <name>T.реак.чел.опер</name>
+        <name>BER.вых.пз.доп</name>
         <descr />
     </symbol>
     <symbol>
-        <name>n.кк.хем</name>
+        <name>BER.вых.пз.треб</name>
         <descr />
     </symbol>
     <symbol>
-        <name>Δ.вр.дискр</name>
+        <name>C</name>
         <descr />
     </symbol>
     <symbol>
-        <name>Δ.общ.доп</name>
+        <name>C.вх.прм</name>
         <descr />
     </symbol>
     <symbol>
-        <name>θ.max.прм</name>
+        <name>C.общ</name>
         <descr />
     </symbol>
     <symbol>
-        <name>T.пр.чм</name>
+        <name>C.пог</name>
         <descr />
     </symbol>
     <symbol>
-        <name>k.исп.общ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ρ.эфф.пз.хем</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>T.обм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>L.сообщ.служ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>k.повт</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>θ.max.опт.прм</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>ρ.эфф.пз.шф</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>k.исп.физ</name>
+        <name>C.пог.доп</name>
         <descr />
     </symbol>
     <symbol>
@@ -692,7 +52,31 @@
         <descr />
     </symbol>
     <symbol>
-        <name>k.служ</name>
+        <name>F</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>F.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>G.попер</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.исп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.исп.инф</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.исп.общ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.исп.физ</name>
         <descr />
     </symbol>
     <symbol>
@@ -700,7 +84,623 @@
         <descr />
     </symbol>
     <symbol>
+        <name>K.с.ш.вх.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.с.ш.вых.пз</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.с.ш.вых.пз.нс</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.служ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.соотн</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.сш.вх.пз.чф</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.сш.вх.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.сш.вхпз.верд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.сш.выхпз.верд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.сш.выхпз.чф</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>L</name>
+        <descr>[Гн]</descr>
+    </symbol>
+    <symbol>
+        <name>L.блок</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>L.волс</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>L.икк</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>L.икк.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>L.лин</name>
+        <descr>[м]</descr>
+    </symbol>
+    <symbol>
+        <name>L.лин.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>L.пог</name>
+        <descr>[Гн/м]</descr>
+    </symbol>
+    <symbol>
+        <name>L.служ.блок</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>L.сообщ</name>
+        <descr>[бит]</descr>
+    </symbol>
+    <symbol>
+        <name>L.сообщ.инф</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>L.сообщ.общ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>L.сообщ.служ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>N.блок</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>N.лин</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>N.сект</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>NA</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.вх.вх.норм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.вх.инт</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.вх.прд.норм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.вх.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.вх.прм.норм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.вых.инт</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.прд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.прд.имп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.прд.норм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.прд.ср</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.распр.мощн</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.с.вх.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.ш.вх.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>P.шф.вх.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>R.волн</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>R.вх.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>R.вых.прд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>R.н.общ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>R.общ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>R.прод</name>
+        <descr>[Ом]</descr>
+    </symbol>
+    <symbol>
+        <name>R.р.кан</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>R.р.кан.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>S.опт.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>S.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>S.прм.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>S.сф.сегм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.вз.спд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.вр.дискр</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.зап.дор</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.обм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.пр</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.пр.чм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.распр</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.реак.чел.опер</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.след</name>
+        <descr>[сек*лин/бит]</descr>
+    </symbol>
+    <symbol>
+        <name>T.сообщ</name>
+        <descr>[сек]</descr>
+    </symbol>
+    <symbol>
+        <name>T.ц.преобр</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>U.вх.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>U.пр.max</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>U.пр.min</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>U.прд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.дор.FDD</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.распр</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.сект</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>d</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>f.след</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>g.пог</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>k.исп.инф</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>k.исп.общ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>k.исп.физ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>k.повт</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>k.служ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>n.1</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>n.2</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>n.ацп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>n.кк</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>n.кк.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>n.кк.хем</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>r</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>r.внутр.прд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>r.пог</name>
+        <descr>[Ом/м]</descr>
+    </symbol>
+    <symbol>
+        <name>Δ.вр.дискр</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δ.кв.ур</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δ.нс</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δ.нс.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δ.общ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δ.общ.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δ.общ.реал</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δ.пр</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δf.шп.волс</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δf.шп.икк</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δλ.отн.прд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δλ.прд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δω.п</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δω.п.волс</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δω.п.р.кан</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δω.п.р.кан.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δω.п.чф</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δω.шп.волс</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Δω.шп.икк</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>γ.чм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>δ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>δ.1</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>δ.2</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>δ.3</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>δ.общ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>δ.пог</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ε</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>η</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>θ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>θ.max.опт.прд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>θ.max.опт.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>θ.max.прд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>θ.max.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>θ.с</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>λ.0</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>λ.0.верх</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>λ.0.нижн</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>λ.сообщ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>μ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ρ.эф.пз.нс</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ρ.эф.пз.шф</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ρ.эфф.пз.верд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ρ.эфф.пз.хем</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>ρ.эфф.пз.чм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ρ.эфф.пз.чф</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ρ.эфф.пз.шф</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>τ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>τ.волс</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>τ.икк</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>τ.имп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>τ.инт</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>τ.р.кан</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ω.FDD.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ω.пр.верх</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ω.пр.верх.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ω.пр.верх.чм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ω.пр.изл</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ПС.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ПС.доп.лин</name>
+        <descr>[бит/(сек*лин)]</descr>
+    </symbol>
+    <symbol>
+        <name>ПС.треб</name>
+        <descr>[бит/сек]</descr>
+    </symbol>
+    <symbol>
+        <name>ПС.треб.инф</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ПС.треб.служ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ПС.треб.физ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Ф.вх.опт.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Ф.вх.прм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Ф.опт.прд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>Ф.прд</name>
         <descr />
     </symbol>
 </symbols>
