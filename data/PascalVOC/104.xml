@@ -108,7 +108,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>K.бзу</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -125,10 +125,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>145</xmin>
+			<xmin>141</xmin>
 			<ymin>710</ymin>
 			<xmax>208</xmax>
-			<ymax>741</ymax>
+			<ymax>742</ymax>
 		</bndbox>
 	</object>
 	<object>

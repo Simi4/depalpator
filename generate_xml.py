@@ -112,7 +112,6 @@ for path in glob('data/PascalVOC/*.xml'):
         for group in groups:
             if group.contains(symbol):
                 group.add(symbol)
-                break
 
     all_groups |= set(groups)
 
@@ -140,11 +139,9 @@ for i, group in enumerate(all_groups):
 tree.write('graph_data/groups.xml', encoding='utf-8')
 del tree
 del root
-del all_groups
 
 
 
-'''
 def find(key, parent=None, gr=None, depth=0):
     if not gr:
         node = pydotplus.Node(str(key))
@@ -168,8 +165,8 @@ graph = pydotplus.Dot(graph_type = 'digraph', simplify=True)
 
 find('T.вр.дискр')
 
-graph.write_svg('result.svg')
-'''
+graph.write_dot('result.dot')
+
 
 
 

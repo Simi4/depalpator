@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>105.png</filename>
+	<path>105.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>794</width>
+		<height>1171</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>φ.поиск.ср</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>195</xmin>
+			<ymin>386</ymin>
+			<xmax>264</xmax>
+			<ymax>404</ymax>
+		</bndbox>
+	</object>
+</annotation>

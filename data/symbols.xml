@@ -52,6 +52,18 @@
         <descr />
     </symbol>
     <symbol>
+        <name>DPI</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>DPI.верт</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>DPI.гор</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>F</name>
         <descr />
     </symbol>
@@ -61,6 +73,18 @@
     </symbol>
     <symbol>
         <name>G.попер</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>H.док</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.бзу</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.загр.HDD</name>
         <descr />
     </symbol>
     <symbol>
@@ -77,6 +101,18 @@
     </symbol>
     <symbol>
         <name>K.исп.физ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.парал.печ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.перекр.верт</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.перекр.гор</name>
         <descr />
     </symbol>
     <symbol>
@@ -124,6 +160,10 @@
         <descr />
     </symbol>
     <symbol>
+        <name>K.цветн.док</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>L</name>
         <descr>[Гн]</descr>
     </symbol>
@@ -133,6 +173,10 @@
     </symbol>
     <symbol>
         <name>L.волс</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>L.док</name>
         <descr />
     </symbol>
     <symbol>
@@ -156,6 +200,10 @@
         <descr>[Гн/м]</descr>
     </symbol>
     <symbol>
+        <name>L.поиск.ср.рад</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>L.служ.блок</name>
         <descr />
     </symbol>
@@ -176,7 +224,19 @@
         <descr />
     </symbol>
     <symbol>
+        <name>L.строки.док</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>N.блок</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>N.град.ярк.м.кан.цветн</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>N.дор</name>
         <descr />
     </symbol>
     <symbol>
@@ -185,6 +245,26 @@
     </symbol>
     <symbol>
         <name>N.сект</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>N.строк</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>N.строк.док</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>N.файл</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>N.эр.док</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>N.эр.строке</name>
         <descr />
     </symbol>
     <symbol>
@@ -280,6 +360,10 @@
         <descr />
     </symbol>
     <symbol>
+        <name>R.скан</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>S.опт.прм</name>
         <descr />
     </symbol>
@@ -296,11 +380,23 @@
         <descr />
     </symbol>
     <symbol>
+        <name>T.бзу-рс</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.бзу-увв</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>T.вз.спд</name>
         <descr />
     </symbol>
     <symbol>
         <name>T.вр.дискр</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.вр.затр.общ</name>
         <descr />
     </symbol>
     <symbol>
@@ -312,11 +408,47 @@
         <descr />
     </symbol>
     <symbol>
+        <name>T.п.Фi.дор</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.печ.попер</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.печ.прод</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.поиск.дор</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.поиск.зап.файл.рад</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.поиск.н.файл.рад</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.поиск.рад</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.поиск.файл</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>T.пр</name>
         <descr />
     </symbol>
     <symbol>
         <name>T.пр.чм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.псц</name>
         <descr />
     </symbol>
     <symbol>
@@ -328,12 +460,32 @@
         <descr />
     </symbol>
     <symbol>
+        <name>T.скан.гор</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.скан.док</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>T.след</name>
         <descr>[сек*лин/бит]</descr>
     </symbol>
     <symbol>
         <name>T.сообщ</name>
         <descr>[сек]</descr>
+    </symbol>
+    <symbol>
+        <name>T.строб.эр</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.счит.дор</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.счит.файл</name>
+        <descr />
     </symbol>
     <symbol>
         <name>T.ц.преобр</name>
@@ -356,7 +508,39 @@
         <descr />
     </symbol>
     <symbol>
+        <name>V.HDD.общ</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.бзу</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.дор</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>V.дор.FDD</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.дор.HDD</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.запис.HDD</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.класт.ср</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.оп.док</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.рад.мг</name>
         <descr />
     </symbol>
     <symbol>
@@ -365,6 +549,22 @@
     </symbol>
     <symbol>
         <name>V.сект</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.скан.гор</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.скан.док</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.скан.строке</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>V.файл</name>
         <descr />
     </symbol>
     <symbol>
@@ -412,6 +612,14 @@
         <descr />
     </symbol>
     <symbol>
+        <name>n.кан</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>n.кан.цветн</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>n.кк</name>
         <descr />
     </symbol>
@@ -420,7 +628,19 @@
         <descr />
     </symbol>
     <symbol>
+        <name>n.кк.инф.эр</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>n.кк.хем</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>n.кк.эр</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>p.цил.рад</name>
         <descr />
     </symbol>
     <symbol>
@@ -644,7 +864,19 @@
         <descr />
     </symbol>
     <symbol>
+        <name>φ.поиск.ср</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>ω.FDD.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ω.вр.HDD</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ω.зерк.призм</name>
         <descr />
     </symbol>
     <symbol>
@@ -668,6 +900,10 @@
         <descr />
     </symbol>
     <symbol>
+        <name>ПС.доп.бзу-рс</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>ПС.доп.лин</name>
         <descr>[бит/(сек*лин)]</descr>
     </symbol>
@@ -676,7 +912,15 @@
         <descr>[бит/сек]</descr>
     </symbol>
     <symbol>
+        <name>ПС.треб.бзу-увв</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>ПС.треб.инф</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ПС.треб.скан.оп</name>
         <descr />
     </symbol>
     <symbol>
