@@ -53,14 +53,14 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>434</xmin>
-			<ymin>867</ymin>
-			<xmax>491</xmax>
-			<ymax>888</ymax>
+			<xmin>435</xmin>
+			<ymin>865</ymin>
+			<xmax>492</xmax>
+			<ymax>886</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>N.цилиндр</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -72,15 +72,15 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>L.поиск.ср</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>327</xmin>
-			<ymin>849</ymin>
+			<ymin>845</ymin>
 			<xmax>396</xmax>
-			<ymax>873</ymax>
+			<ymax>869</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -96,15 +96,15 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.п.н.Фi.рад</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>422</xmin>
 			<ymin>780</ymin>
-			<xmax>474</xmax>
-			<ymax>810</ymax>
+			<xmax>470</xmax>
+			<ymax>804</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -113,10 +113,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>328</xmin>
-			<ymin>760</ymin>
-			<xmax>393</xmax>
-			<ymax>795</ymax>
+			<xmin>334</xmin>
+			<ymin>763</ymin>
+			<xmax>388</xmax>
+			<ymax>790</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -149,9 +149,9 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>299</xmin>
+			<xmin>298</xmin>
 			<ymin>640</ymin>
-			<xmax>394</xmax>
+			<xmax>393</xmax>
 			<ymax>674</ymax>
 		</bndbox>
 	</object>
@@ -168,7 +168,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.п.н.Фi.рад</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -288,7 +288,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.вр.затр.общ</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -300,7 +300,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.поиск.счит.файл</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -312,7 +312,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.поиск.счит.файл</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -324,7 +324,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.пс.Фi</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -381,6 +381,78 @@
 			<ymin>696</ymin>
 			<xmax>496</xmax>
 			<ymax>727</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>294</xmin>
+			<ymin>637</ymin>
+			<xmax>530</xmax>
+			<ymax>675</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>331</xmin>
+			<ymin>744</ymin>
+			<xmax>489</xmax>
+			<ymax>806</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>325</xmin>
+			<ymin>832</ymin>
+			<xmax>496</xmax>
+			<ymax>888</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>316</xmin>
+			<ymin>911</ymin>
+			<xmax>505</xmax>
+			<ymax>960</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>329</xmin>
+			<ymin>327</ymin>
+			<xmax>493</xmax>
+			<ymax>366</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>304</xmin>
+			<ymin>257</ymin>
+			<xmax>479</xmax>
+			<ymax>292</ymax>
 		</bndbox>
 	</object>
 </annotation>

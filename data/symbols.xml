@@ -24,6 +24,10 @@
         <descr />
     </symbol>
     <symbol>
+        <name>BER.вых.пз.общ</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>BER.вых.пз.треб</name>
         <descr />
     </symbol>
@@ -132,6 +136,10 @@
         <descr />
     </symbol>
     <symbol>
+        <name>K.с.ш.вых.пз.общ</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>K.служ</name>
         <descr />
     </symbol>
@@ -149,6 +157,10 @@
     </symbol>
     <symbol>
         <name>K.сш.вхпз.верд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>K.сш.вых.пз.треб</name>
         <descr />
     </symbol>
     <symbol>
@@ -198,6 +210,10 @@
     <symbol>
         <name>L.пог</name>
         <descr>[Гн/м]</descr>
+    </symbol>
+    <symbol>
+        <name>L.поиск.ср</name>
+        <descr />
     </symbol>
     <symbol>
         <name>L.поиск.ср.рад</name>
@@ -257,6 +273,10 @@
     </symbol>
     <symbol>
         <name>N.файл</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>N.цилиндр</name>
         <descr />
     </symbol>
     <symbol>
@@ -360,6 +380,10 @@
         <descr />
     </symbol>
     <symbol>
+        <name>R.разв</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>R.скан</name>
         <descr />
     </symbol>
@@ -412,6 +436,26 @@
         <descr />
     </symbol>
     <symbol>
+        <name>T.п.дор</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.п.зап.ф.рад</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.п.н.Фi.рад</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.п.нач.ф.рад</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.п.файл.ср.дор</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>T.печ.попер</name>
         <descr />
     </symbol>
@@ -436,6 +480,10 @@
         <descr />
     </symbol>
     <symbol>
+        <name>T.поиск.счит.файл</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>T.поиск.файл</name>
         <descr />
     </symbol>
@@ -445,6 +493,14 @@
     </symbol>
     <symbol>
         <name>T.пр.чм</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.пс.Фi</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>T.псд</name>
         <descr />
     </symbol>
     <symbol>
@@ -540,6 +596,10 @@
         <descr />
     </symbol>
     <symbol>
+        <name>V.печ.гор</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>V.рад.мг</name>
         <descr />
     </symbol>
@@ -568,6 +628,10 @@
         <descr />
     </symbol>
     <symbol>
+        <name>V.файл.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>d</name>
         <descr />
     </symbol>
@@ -577,26 +641,6 @@
     </symbol>
     <symbol>
         <name>g.пог</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>k.исп.инф</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>k.исп.общ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>k.исп.физ</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>k.повт</name>
-        <descr />
-    </symbol>
-    <symbol>
-        <name>k.служ</name>
         <descr />
     </symbol>
     <symbol>
@@ -637,6 +681,10 @@
     </symbol>
     <symbol>
         <name>n.кк.эр</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>p.рад</name>
         <descr />
     </symbol>
     <symbol>
@@ -820,7 +868,19 @@
         <descr />
     </symbol>
     <symbol>
+        <name>ρ.эфф.пз.алг</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ρ.эфф.пз.апп</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>ρ.эфф.пз.верд</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ρ.эфф.пз.общ</name>
         <descr />
     </symbol>
     <symbol>
@@ -876,6 +936,10 @@
         <descr />
     </symbol>
     <symbol>
+        <name>ω.вр.зерк.призм.доп</name>
+        <descr />
+    </symbol>
+    <symbol>
         <name>ω.зерк.призм</name>
         <descr />
     </symbol>
@@ -913,6 +977,10 @@
     </symbol>
     <symbol>
         <name>ПС.треб.бзу-увв</name>
+        <descr />
+    </symbol>
+    <symbol>
+        <name>ПС.треб.бзу.лазер</name>
         <descr />
     </symbol>
     <symbol>

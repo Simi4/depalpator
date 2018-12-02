@@ -35,4 +35,40 @@
 			<ymax>654</ymax>
 		</bndbox>
 	</object>
+	<object>
+		<name>p.рад</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>372</xmin>
+			<ymin>646</ymin>
+			<xmax>404</xmax>
+			<ymax>666</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>T.псд</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>420</xmin>
+			<ymin>644</ymin>
+			<xmax>452</xmax>
+			<ymax>665</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>300</xmin>
+			<ymin>620</ymin>
+			<xmax>459</xmax>
+			<ymax>667</ymax>
+		</bndbox>
+	</object>
 </annotation>

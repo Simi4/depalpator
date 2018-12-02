@@ -12,7 +12,7 @@
 	</size>
 	<segmented>0</segmented>
 	<object>
-		<name>symbol</name>
+		<name>T.п.дор</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -24,7 +24,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.п.файл.ср.дор</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -36,55 +36,55 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>V.класт.ср</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>279</xmin>
-			<ymin>1055</ymin>
-			<xmax>347</xmax>
-			<ymax>1073</ymax>
+			<xmin>283</xmin>
+			<ymin>1049</ymin>
+			<xmax>348</xmax>
+			<ymax>1072</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>V.файл.доп</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>287</xmin>
-			<ymin>1016</ymin>
-			<xmax>345</xmax>
-			<ymax>1039</ymax>
+			<xmin>281</xmin>
+			<ymin>1017</ymin>
+			<xmax>348</xmax>
+			<ymax>1041</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.п.зап.ф.рад</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>135</xmin>
 			<ymin>947</ymin>
-			<xmax>189</xmax>
-			<ymax>984</ymax>
+			<xmax>192</xmax>
+			<ymax>983</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.поиск.рад</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>139</xmin>
-			<ymin>896</ymin>
+			<xmin>132</xmin>
+			<ymin>897</ymin>
 			<xmax>207</xmax>
-			<ymax>917</ymax>
+			<ymax>920</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.поиск.файл</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -96,14 +96,14 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.вр.затр.общ</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>135</xmin>
-			<ymin>812</ymin>
-			<xmax>189</xmax>
+			<ymin>821</ymin>
+			<xmax>193</xmax>
 			<ymax>849</ymax>
 		</bndbox>
 	</object>
@@ -114,61 +114,49 @@
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>134</xmin>
-			<ymin>768</ymin>
-			<xmax>169</xmax>
+			<ymin>773</ymin>
+			<xmax>172</xmax>
 			<ymax>788</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>141</xmin>
-			<ymin>710</ymin>
-			<xmax>208</xmax>
-			<ymax>742</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>symbol</name>
+		<name>T.вр.затр.общ</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>271</xmin>
-			<ymin>745</ymin>
-			<xmax>333</xmax>
+			<ymin>753</ymin>
+			<xmax>331</xmax>
 			<ymax>780</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>V.файл.доп</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>271</xmin>
 			<ymin>786</ymin>
-			<xmax>333</xmax>
-			<ymax>812</ymax>
+			<xmax>334</xmax>
+			<ymax>814</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>ПС.доп</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>357</xmin>
 			<ymin>786</ymin>
-			<xmax>400</xmax>
-			<ymax>814</ymax>
+			<xmax>403</xmax>
+			<ymax>813</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.вр.затр.общ</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -180,19 +168,19 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.поиск.файл</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>214</xmin>
+			<xmin>209</xmin>
 			<ymin>824</ymin>
-			<xmax>289</xmax>
+			<xmax>293</xmax>
 			<ymax>850</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.счит.файл</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -204,43 +192,43 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.поиск.дор</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>322</xmin>
-			<ymin>853</ymin>
+			<ymin>858</ymin>
 			<xmax>396</xmax>
 			<ymax>883</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.поиск.рад</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>231</xmin>
-			<ymin>849</ymin>
+			<ymin>857</ymin>
 			<xmax>309</xmax>
 			<ymax>880</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.п.нач.ф.рад</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>225</xmin>
-			<ymin>889</ymin>
-			<xmax>289</xmax>
+			<ymin>891</ymin>
+			<xmax>287</xmax>
 			<ymax>919</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.п.зап.ф.рад</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -252,7 +240,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>V.файл.доп</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -264,19 +252,19 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>V.класт.ср</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>261</xmin>
-			<ymin>971</ymin>
-			<xmax>331</xmax>
-			<ymax>996</ymax>
+			<xmin>258</xmin>
+			<ymin>970</ymin>
+			<xmax>323</xmax>
+			<ymax>994</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>T.псц</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
@@ -288,27 +276,87 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>N.дор</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>359</xmin>
-			<ymin>970</ymin>
-			<xmax>403</xmax>
-			<ymax>990</ymax>
+			<xmin>363</xmin>
+			<ymin>971</ymin>
+			<xmax>400</xmax>
+			<ymax>993</ymax>
 		</bndbox>
 	</object>
 	<object>
-		<name>symbol</name>
+		<name>group</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>259</xmin>
-			<ymin>713</ymin>
-			<xmax>329</xmax>
-			<ymax>739</ymax>
+			<xmin>131</xmin>
+			<ymin>932</ymin>
+			<xmax>406</xmax>
+			<ymax>1003</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>130</xmin>
+			<ymin>1009</ymin>
+			<xmax>374</xmax>
+			<ymax>1082</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>131</xmin>
+			<ymin>890</ymin>
+			<xmax>369</xmax>
+			<ymax>921</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>130</xmin>
+			<ymin>856</ymin>
+			<xmax>400</xmax>
+			<ymax>883</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>132</xmin>
+			<ymin>824</ymin>
+			<xmax>383</xmax>
+			<ymax>851</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>group</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>130</xmin>
+			<ymin>753</ymin>
+			<xmax>419</xmax>
+			<ymax>816</ymax>
 		</bndbox>
 	</object>
 </annotation>
