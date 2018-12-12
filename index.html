@@ -10,9 +10,7 @@
     html, body {
         font: normal 16px/26px "Roboto", Arial, sans-serif;
         font-size: 14px;
-        height: 100%;
         margin: 0;
-        padding: 0;
     }
     .ui-button {
         margin: 4px;
@@ -24,46 +22,58 @@
         background: lime;
     }
     #header {
-        position: absolute;
-        height: 150px;
-        overflow: auto;
-        margin: 2px;
+        position: absolute; 
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow-y: scroll;
+    }
+    #app {
+        height: 100vh;
     }
     #network {
-        position: absolute;
+        position: absolute; 
         left: 0;
-        right: 330px;
-        top: 155px;
+        right: 0;
+        top: 0;
         bottom: 0;
     }
-    #conf {
+    #network-settings {
+        display: block;
         position: absolute;
-        width: 360px;
-        right: 5px;
-        top: 155px;
-        bottom: 5px;
-        background: lightcyan;
-        overflow: auto;
+        top: 10px;
+        right: 15px;
     }
-    #conf-info {
-        font: normal 16px/26px "Roboto", Arial, sans-serif;
+    #conf {
+        position: absolute; 
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow-y: auto;
+    }
+    #conf > p {
         text-align: center;
     }
-    .list-item {
-        display: table;
+    #conf > p > span {
         font-size: 18px;
-        border-bottom: 1px solid lightgrey;
-        width: 100%;
-        word-wrap: normal;
     }
-    .list-item-cell {
-        display: table-cell;
-        vertical-align: middle;
+    .item {
+        box-sizing: border-box;
+        border-top: 1px solid #eee;
+        padding-bottom: 1px;
+        display: flex;
+        align-items: center;
+    }
+    .item > span {
+        font-size: 16px;
     }
   </style>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/vue-splitpane@1.0.2/dist/vue-split-pane.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
@@ -72,23 +82,40 @@ $(function() {
 var all_groups = [];
 var app_data = { symbols: [], formulas: [] };
 
+$.ajax({
+    url: 'graph_data/groups.xml',
+    dataType: 'xml',
+    success: function(xmlData){
+        $(xmlData).find('group').each(function() {
+            all_groups.push({
+                id: parseInt($(this).find('id').text()),
+                image: $(this).find('image').text(),
+                symbols: $(this).find('name').text().split(', '),
+                used: false
+            });
+        });
+    }
+});
+
 var app = new Vue({
     el: '#app',
     data: app_data,
     created: function() {
+        $('input[name=depth-group]').checkboxradio({ icon: false });
         $.ajax({
             url: 'data/symbols.xml',
             dataType: 'xml',
-            success: function(data){
-                $(data).find('symbol').each(function() {
+            success: function(xmlData){
+                $(xmlData).find('symbol').each(function() {
                     app_data.symbols.push($(this).find('name').text());
                 });
                 Vue.nextTick(function () {
                     $('input[type=radio]').checkboxradio({ icon: false });
-                    $('input[type=radio]').click(function() {
+                    $('input[name=radio-1]').click(function() {
                         vis_data.nodes.clear();
                         vis_data.edges.clear();
                         used = [];
+                        MAX_DEPTH = parseInt($('input[name=depth-group]:checked').prev().text()) | 2;
                         do_graph($(this).next().text());
                     });
                     $.contextMenu({
@@ -111,23 +138,10 @@ var app = new Vue({
                 });
             }
         });
-        $.ajax({
-            url: 'graph_data/groups.xml',
-            dataType: 'xml',
-            success: function(data){
-                $(data).find('group').each(function() {
-                    all_groups.push({
-                        id: parseInt($(this).find('id').text()),
-                        image: $(this).find('image').text(),
-                        symbols: $(this).find('name').text().split(', '),
-                        used: false
-                    });
-                });
-            }
-        });
     }
 });
 
+var MAX_DEPTH = 2;
 var used = null;
 function do_graph(key, parent=null, gr=null, depth=0) {
     //console.log(key, parent, gr, depth);
@@ -158,7 +172,7 @@ function do_graph(key, parent=null, gr=null, depth=0) {
             to: node
         });
     }
-    if (depth >= 2) return;
+    if (depth >= MAX_DEPTH) return;
     all_groups.forEach(function(group) {
         if (group === gr) return;
         if (group.symbols.indexOf(key) != -1) {
@@ -239,25 +253,41 @@ var network = new vis.Network(container, vis_data, options);
 </head>
 <body>
   <div id="app">
-    <div id="header">
-      <template v-for="(symbol, index) in symbols">
-        <input type="radio" name="radio-1" :id="'radio-'+index">
-        <label class="context-menu-one" :for="'radio-'+index">{{symbol}}</label>
-      </template>
-    </div>
-    <div id="network"></div>
-    <div id="conf">
-      <p id="conf-info">
-        Выберите символы правым кликом.
-        <button id="solve" class="ui-button ui-widget ui-corner-all">Построить решение</button>
-      </p>
-      <template v-for="f in formulas">
-        <div class="list-item">
-          <img :src="f.group.image" class="list-item-cell" />
-          <span class="list-item-cell">=> {{f.symbol}}</span>
+    <split-pane split="horizontal" :min-percent='15' :default-percent='25'>
+      <div id="header" slot="paneL">
+        <template v-for="(symbol, index) in symbols">
+          <input type="radio" name="radio-1" :id="'radio-'+index">
+          <label class="context-menu-one" :for="'radio-'+index">{{symbol}}</label>
+        </template>
+      </div>
+      <split-pane slot="paneR" split="vertical" :min-percent='20' :default-percent='65'>
+        <div slot="paneL">
+          <div id="network"></div>
+          <div id="network-settings">
+            <fieldset>
+              <legend>Глубина графа: </legend>
+              <label for="depth-2">2</label>
+              <input type="radio" name="depth-group" id="depth-2" checked>
+              <label for="depth-3">3</label>
+              <input type="radio" name="depth-group" id="depth-3">
+            </fieldset>
+          </div>
         </div>
-      </template>
-    </div>
+        <div id="conf" slot="paneR">
+          <p>
+            <span>Выберите символы правым кликом.</span><br>
+            <button id="solve" class="ui-button ui-widget ui-corner-all">Построить решение</button>
+          </p> 
+          <div style="padding-left: 5px">
+            <template v-for="f in formulas">
+              <div class="item">
+                <img :src="f.group.image" /><span> => {{f.symbol}}</span>
+              </div>
+            </template>
+          </div>
+        </div>
+      </split-pane>
+    </split-pane>
   </div>
 </body>
 </html>
