@@ -81,6 +81,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
+  <script src="https://unpkg.com/graphlib@2.1.7/dist/graphlib.min.js"></script>
   <script>
 $(function() {
 var all_groups = [];
@@ -104,8 +105,21 @@ $.ajax({
 var app = new Vue({
     el: '#app',
     data: app_data,
-    created: function() {
+    mounted: function() {
+        $('input[type=checkbox]').checkboxradio();
         $('input[name=depth-group]').checkboxradio({ icon: false });
+        $('input[name=depth-group]').click(function() {
+            var obj = $('input[name=radio-1]:checked');
+            if (obj.length == 0)
+                return;
+            vis_data.nodes.clear();
+            vis_data.edges.clear();
+            used = [];
+            MAX_DEPTH = parseInt($('input[name=depth-group]:checked').prev().text()) | 2;
+            do_graph($('input[name=radio-1]:checked').next().text());
+        });
+    },
+    created: function() {
         $.contextMenu({
             selector: '.item', 
             callback: function(key, options) {
@@ -149,7 +163,7 @@ var app = new Vue({
                     app_data.symbols.push($(this).find('name').text());
                 });
                 Vue.nextTick(function () {
-                    $('input[type=radio]').checkboxradio({ icon: false });
+                    $('input[name=radio-1]').checkboxradio({ icon: false });
                     $('input[name=radio-1]').click(function() {
                         vis_data.nodes.clear();
                         vis_data.edges.clear();
@@ -208,11 +222,12 @@ function do_graph(key, parent=null, gr=null, depth=0) {
 
 function solve() {
     app_data.formulas = [];
+    var formulas = [];
     var known = $.map($('.known-symbol'), function(element) {
-        return $(element).text()
+        return $(element).text();
     });
     var find = $.map($('.find-symbol'), function(element) {
-        return $(element).text()
+        return $(element).text();
     });
     var do1 = true;
     while (do1) {
@@ -223,7 +238,7 @@ function solve() {
             let diff = $(group.symbols).not($(known));
             if (diff.length != 1) continue;
             known.push(diff[0]);
-            app_data.formulas.push({
+            formulas.push({
                 group: group,
                 symbol: diff[0],
                 is_required: find.indexOf(diff[0]) > -1
@@ -239,6 +254,42 @@ function solve() {
             break;
         }
     }
+
+    var minimize = $('input[name=checkbox-min]').is(':checked');
+    if (!minimize) {
+        app_data.formulas = formulas;
+        return;
+    }
+
+    // remove extra formulas
+    var g = new graphlib.Graph({multigraph: true});
+    for (let formula of formulas) {
+        for (let symbol of formula.group.symbols) {
+            if (formula.symbol != symbol) {
+                g.setNode(formula.symbol);
+                g.setNode(symbol);
+                g.setEdge(formula.symbol, symbol, formula.group.id);
+            }
+        }
+    }
+
+    var nodes = g.nodes();
+    var edges = [];
+
+    for (let fsymbol of find) {
+        let d = graphlib.alg.dijkstra(g, fsymbol);
+        for (let symbol of nodes) {
+            if (d[symbol].distance == 0)
+                continue;
+            if (d[symbol].distance != Number.POSITIVE_INFINITY) {
+                edges.push(g.edge({v: d[symbol].predecessor, w: symbol}));
+            }
+        }
+    }
+
+    for (let formula of formulas)
+        if (edges.indexOf(formula.group.id) > -1)
+            app_data.formulas.push(formula);
 }
 
 $('#solve').click(function() {
@@ -294,17 +345,21 @@ var network = new vis.Network(container, vis_data, options);
           <div id="network"></div>
           <div id="network-settings">
             <fieldset>
-              <legend>Глубина графа: </legend>
+              <legend>Глубина рекурсии: </legend>
               <label for="depth-2">2</label>
               <input type="radio" name="depth-group" id="depth-2" checked>
               <label for="depth-3">3</label>
               <input type="radio" name="depth-group" id="depth-3">
+              <label for="depth-4">4</label>
+              <input type="radio" name="depth-group" id="depth-4">
             </fieldset>
           </div>
         </div>
         <div id="conf" slot="paneR">
           <p>
             <span>Выберите символы правым кликом.</span><br>
+            <label for="checkbox-min">Минимизировать решение</label>
+            <input type="checkbox" name="checkbox-min" id="checkbox-min">
             <button id="solve" class="ui-button ui-widget ui-corner-all">Построить решение</button>
           </p> 
           <div style="padding-left: 5px">
