@@ -62,9 +62,13 @@
     .item {
         box-sizing: border-box;
         border-top: 1px solid #eee;
-        padding-bottom: 1px;
+        padding-bottom: 5px;
+        padding-top: 5px;
         display: flex;
         align-items: center;
+    }
+    .item[is_required] {
+        background: lime;
     }
     .item > span {
         font-size: 16px;
@@ -91,7 +95,7 @@ $.ajax({
                 id: parseInt($(this).find('id').text()),
                 image: $(this).find('image').text(),
                 symbols: $(this).find('name').text().split(', '),
-                used: false
+                excluded: false
             });
         });
     }
@@ -102,6 +106,41 @@ var app = new Vue({
     data: app_data,
     created: function() {
         $('input[name=depth-group]').checkboxradio({ icon: false });
+        $.contextMenu({
+            selector: '.item', 
+            callback: function(key, options) {
+                if (key == 'exclude') {
+                    var formula_id = parseInt($(this).attr('formula'));
+                    for (let group of all_groups) {
+                        if (group.id == formula_id) {
+                            group.excluded = true;
+                            break;
+                        }
+                    }
+                    solve();
+                }
+            },
+            items: {
+                exclude: { name: "Исключить из решения" }
+            }
+        });
+        $.contextMenu({
+            selector: '.context-menu-one', 
+            callback: function(key, options) {
+                //console.log($(this).text());
+                if (key == 'find') {
+                    $(this).removeClass('known-symbol', 100);
+                    $(this).toggleClass('find-symbol', 100);
+                } else {
+                    $(this).removeClass('find-symbol', 100);
+                    $(this).toggleClass('known-symbol', 100);
+                }
+            },
+            items: {
+                find: { name: "Нужно найти" },
+                known: { name: "Известен" }
+            }
+        });
         $.ajax({
             url: 'data/symbols.xml',
             dataType: 'xml',
@@ -117,23 +156,6 @@ var app = new Vue({
                         used = [];
                         MAX_DEPTH = parseInt($('input[name=depth-group]:checked').prev().text()) | 2;
                         do_graph($(this).next().text());
-                    });
-                    $.contextMenu({
-                        selector: '.context-menu-one', 
-                        callback: function(key, options) {
-                            console.log($(this).text());
-                            if (key == 'find') {
-                                $(this).removeClass('known-symbol', 100);
-                                $(this).toggleClass('find-symbol', 100);
-                            } else {
-                                $(this).removeClass('find-symbol', 100);
-                                $(this).toggleClass('known-symbol', 100);
-                            }
-                        },
-                        items: {
-                            find: { name: "Нужно найти" },
-                            known: { name: "Известен" }
-                        }
                     });
                 });
             }
@@ -184,7 +206,7 @@ function do_graph(key, parent=null, gr=null, depth=0) {
     });
 }
 
-$('#solve').click(function() {
+function solve() {
     app_data.formulas = [];
     var known = $.map($('.known-symbol'), function(element) {
         return $(element).text()
@@ -192,20 +214,20 @@ $('#solve').click(function() {
     var find = $.map($('.find-symbol'), function(element) {
         return $(element).text()
     });
-    var groups = all_groups.slice();
     var do1 = true;
     while (do1) {
         let do2 = true;
 
-        for (let group of groups) {
-            if (group.used) continue;
+        for (let group of all_groups) {
+            if (group.excluded) continue;
             let diff = $(group.symbols).not($(known));
             if (diff.length != 1) continue;
             known.push(diff[0]);
             app_data.formulas.push({
                 group: group,
-                symbol: diff[0]
-            })
+                symbol: diff[0],
+                is_required: find.indexOf(diff[0]) > -1
+            });
             do2 = false;
             if ($(find).not($(known)).length == 0) {
                 do1 = false;
@@ -217,6 +239,13 @@ $('#solve').click(function() {
             break;
         }
     }
+}
+
+$('#solve').click(function() {
+    for (let group of all_groups) {
+        group.excluded = false;
+    }
+    solve();
 });
 
 var vis_data = {
@@ -280,7 +309,7 @@ var network = new vis.Network(container, vis_data, options);
           </p> 
           <div style="padding-left: 5px">
             <template v-for="f in formulas">
-              <div class="item">
+              <div class="item" :is_required="f.is_required" :formula="f.group.id">
                 <img :src="f.group.image" /><span> => {{f.symbol}}</span>
               </div>
             </template>
